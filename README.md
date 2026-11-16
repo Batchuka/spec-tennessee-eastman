@@ -1,10 +1,12 @@
 # Supervising the Tennessee Eastman process with Kubernetes
 
+> **This is the shared reference of the Tennessee Eastman plant.** The research now happens in three lines that use it: [Hefesto](https://github.com/Green-Cinnamon-Labs/spec-hefesto) (supervisory applications), [Monjolo](https://github.com/Green-Cinnamon-Labs/spec-monjolo) (simulation) and [Gajeiro](https://github.com/Green-Cinnamon-Labs/spec-gajeiro) (Kubernetes supervision). Open work is tracked on the [GCLabs board](https://github.com/orgs/Green-Cinnamon-Labs/projects/12).
+
 Can Kubernetes act as the supervisory layer of a process plant? This project builds one and tries it. A simulated chemical plant runs continuously and publishes its signals over OPC UA; a controller inside a Kubernetes cluster watches it and decides, every 30 seconds, whether the plant complies with an operating policy that the user declares as Kubernetes resources: the operating cost, the production targets, the operating limits and the control loops that must stay healthy. The supervisor knows nothing about the plant beyond what the policy says, and it only observes: it never writes to the plant.
 
 The plant is the Tennessee Eastman process (TEP), the benchmark published by Downs and Vogel (1993), rewritten in Rust from the original FORTRAN.
 
-This is a bachelor's thesis in Control and Automation Engineering at the Instituto Federal do Espírito Santo (IFES), by Matheus Corteletti Delfino: *Supervisão Declarativa do Processo Tennessee Eastman com Kubernetes: Função de Custo e Qualidade de Malhas sobre uma Planta Simulada em OPC UA* (2026). The text, in Portuguese, is in [`tep-monografia`](https://github.com/Batchuka/tep-monografia).
+This is a bachelor's thesis in Control and Automation Engineering at the Instituto Federal do Espírito Santo (IFES), by Matheus Corteletti Delfino: *Supervisão Declarativa do Processo Tennessee Eastman com Kubernetes: Função de Custo e Qualidade de Malhas sobre uma Planta Simulada em OPC UA* (2026). The text, in Portuguese, is in [`tep-monografia`](https://github.com/Batchuka/gajeiro-research).
 
 This repository is the entry point. It holds no code: it holds the experiment log, the design notes and the issues that span the other repositories.
 
